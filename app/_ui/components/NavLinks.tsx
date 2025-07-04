@@ -34,7 +34,7 @@ export default function NavLinks() {
                                 "flex items-center justify-center gap-2 p-3 font-extrabold",
                                 {
                                     'text-blue-500': pathname === link.href,
-                                    'text-gray-400 dark:hover:text-zinc-100 hover:text-zinc-700': pathname !== link.href,
+                                    'text-gray-400 hover:text-blue-400': pathname !== link.href,
                                 },
                             )}
                         >

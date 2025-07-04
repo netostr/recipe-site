@@ -30,7 +30,7 @@ export default function ThemeToggle() {
     }, [])
 
     if (!mounted) {
-        return <div className='md:w-10 w-8' />
+        return <div className='sm:w-10 w-8' />
     }
 
 
@@ -43,8 +43,9 @@ export default function ThemeToggle() {
     }
 
     return (
-        <button onClick={handleToogle} title={`${theme} mode`}>
-            {ThemeIcon ? <ThemeIcon className="md:h-10 md:w-10 h-8 w-8 cursor-pointer" /> : null}
+        <button onClick={handleToogle} title={`${theme} mode`} className="sm:h-10 sm:w-10 h-8 w-8 cursor-pointer rounded-xl flex items-center justify-center
+                bg-current/10 transition hover:bg-current/30">
+            {ThemeIcon ? <ThemeIcon className="sm:h-6 sm:w-6 h-5 w-5" /> : null}
         </button>
     );
 }
