@@ -1,10 +1,7 @@
 export default function Footer() {
     return (
-        <footer className="flex gap-6 flex-wrap items-center justify-center">
-            <p>aaaaaaaaaaaa</p>
-            <p>aaaaaaaaaaaa</p>
-            <p>aaaaaaaaaaaa</p>
-            <p>aaaaaaaaaaaa</p>
+        <footer className="flex gap-5 flex-wrap items-center justify-center p-5 text-3xl w-full">
+            &copy; Блокнот рецептов, 2025
         </footer>
     )
 }

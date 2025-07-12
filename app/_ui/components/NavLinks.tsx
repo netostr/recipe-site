@@ -1,29 +1,29 @@
-'use client';
+"use client";
 
 import {
     PlusCircleIcon,
     StarIcon,
     QueueListIcon,
-} from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
+} from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const LINKS = [
     {
-        name: 'Мои рецепты',
-        href: '/my_recipes',
+        name: "Мои рецепты",
+        href: "/my_recipes",
         icon: QueueListIcon,
     },
-    { name: 'Избранное', href: '/favorites', icon: StarIcon },
-    { name: 'Добавить новый рецепт', href: '/add_a_new_recipe', icon: PlusCircleIcon },
+    { name: "Избранное", href: "/favorites", icon: StarIcon },
+    { name: "Добавить новый рецепт", href: "/recipe/create", icon: PlusCircleIcon },
 ];
 
 export default function NavLinks() {
     const pathname = usePathname();
 
     return (
-        <ul className='flex gap-2 items-center justify-center'>
+        <ul className="flex gap-2 items-center justify-center">
             {LINKS.map((link) => {
                 const LinkIcon = link.icon;
                 return (
@@ -31,10 +31,10 @@ export default function NavLinks() {
                         <Link
                             href={link.href}
                             className={clsx(
-                                "flex items-center justify-center gap-2 p-3 font-extrabold",
+                                "flex items-center justify-center gap-2 p-3 font-bold",
                                 {
-                                    'text-blue-500': pathname === link.href,
-                                    'text-gray-400 hover:text-blue-400': pathname !== link.href,
+                                    "text-violet-700": pathname === link.href,
+                                    "hover:text-violet-700": pathname !== link.href,
                                 },
                             )}
                         >
