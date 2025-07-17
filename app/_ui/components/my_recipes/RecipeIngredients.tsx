@@ -57,7 +57,7 @@ export default function RecipeIngredients({ recipeIngredients, initServings }: {
 
 
 function RecipeIngredientComponent({ ingridient, ratioServings }: { ingridient: RecipeIngredient; ratioServings: number; }) {
-    const amount = ingridient.amount ? Math.round(ingridient.amount * ratioServings * 100) / 100 : ingridient.amount
+    const amount = ingridient.amount && Math.round(ingridient.amount * ratioServings * 100) / 100
 
     return (
         <li className="odd:bg-gradient-to-r odd:from-transparent odd:via-gray-400/40 odd:to-transparent">

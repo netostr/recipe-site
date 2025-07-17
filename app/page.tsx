@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
             </section>
             <section
-                className="flex flex-col gap-10 justify-center items-center text-center bg-purple-500/40 rounded-4xl p-5 max-w-full"
+                className="flex flex-col gap-10 justify-center items-center text-center bg-purple-500/40 rounded-4xl p-5 w-full"
                 id="examples"
             >
                 <h2 className="text-5xl font-semibold">Примеры рецептов</h2>

@@ -13,7 +13,7 @@ export type RecipeDescription = {
     cook_time: string;
     servings: number;
     calories: string;
-    image_url: string;
+    image_url?: string;
     favorite: boolean;
 }
 

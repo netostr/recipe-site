@@ -13,16 +13,18 @@ export default function RecipeTitle({ recipeDescription }: { recipeDescription: 
                 {recipeDescription.title}
             </h1>
             <div className="flex w-full justify-center items-center gap-10 flex-wrap md:flex-nowrap">
-                <div className="relative aspect-4/3 w-full md:w-1/2 rounded-2xl overflow-hidden ">
-                    <Image
-                        src={recipeDescription.image_url}
-                        alt="Изображение готового блюда"
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority
-                    />
-                </div>
+                {recipeDescription.image_url ? (
+                    <div className="relative aspect-4/3 w-full md:w-1/2 rounded-2xl overflow-hidden ">
+                        <Image
+                            src={recipeDescription.image_url}
+                            alt="Изображение готового блюда"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority
+                        />
+                    </div>
+                ) : null}
                 <p className="sm:text-4xl text-3xl md:w-1/2 w-auto">
                     {recipeDescription.description}
                 </p>

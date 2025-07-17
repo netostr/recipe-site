@@ -20,12 +20,17 @@ export default function RecipeCard({ recipeDescription, recipeHref }: { recipeDe
                             {recipeDescription.favorite ? <StarIcon className="text-amber-300" /> : null}
                         </div>
                     </header>
-                    <Image
-                        src={recipeDescription.image_url}
-                        alt=""
-                        fill
-                        className="-z-1 object-cover"
-                    />
+                    {
+                        recipeDescription.image_url ?
+                            (
+                                <Image
+                                    src={recipeDescription.image_url}
+                                    alt=""
+                                    fill
+                                    className="-z-1 object-cover"
+                                />
+                            ) : null
+                    }
                     <p className="text-3xl line-clamp-5 sm:line-clamp-2 rounded-4xl px-4 py-2 bg-linear-to-t from-stone-950/80 to-stone-950/10  text-zinc-100">
                         {recipeDescription.description}
                     </p>

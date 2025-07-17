@@ -4,6 +4,7 @@ import { caveat } from "@/app/_ui/styles/fonts";
 import Header from "@/app/_ui/components/Header";
 import Footer from "@/app/_ui/components/Footer";
 import { ThemeProvider } from "next-themes";
+import ScrollToTopButton from "@/app/_ui/components/ScrollToTopButton";
 
 export const metadata: Metadata = {
   title: "Recipes i liked",
@@ -25,8 +26,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="grow flex flex-col justify-center items-center gap-5 px-5 max-w-7xl">
+          <main className="grow flex flex-col justify-center items-center gap-5 px-5 max-w-7xl w-full">
             {children}
+            <ScrollToTopButton />
           </main>
           <Footer />
         </ThemeProvider>
