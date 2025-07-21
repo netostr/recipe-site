@@ -15,12 +15,11 @@ export default async function RecipeExample(props: {
         notFound();
     }
 
-    const recipeIngredients = getRecipeIngredientExamplesByRecipeId(recipId);
-    const recipeSteps = getRecipeStepExamplesByRecipeId(recipId);
-
     return (
-        <>
-            <Recipe recipeDescription={recipeDescription} recipeIngredients={recipeIngredients} recipeSteps={recipeSteps} />
-        </>
+        <Recipe
+            recipId={recipId}
+            recipeDescription={recipeDescription}
+            getRecipeIngredients={getRecipeIngredientExamplesByRecipeId}
+            getRecipeSteps={getRecipeStepExamplesByRecipeId} />
     )
 }

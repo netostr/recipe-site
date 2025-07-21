@@ -1,4 +1,4 @@
-import { CustomLink } from "../_ui/components/CustomLink";
+import { CustomLink } from "./_ui/components/CustomLink";
 
 export default function NotFound() {
     return (

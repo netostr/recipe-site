@@ -19,9 +19,9 @@ export function getRecipeStepExamplesByRecipeId(recipeId: string) {
 }
 
 
-export function getExamplesById<T extends { recipe_id: string }>(partRecipe: T[], recipeId: string): T[] {
+export function getExamplesById<T extends { recipe_id: string }>(partRecipe: T[], recipeId: string): Promise<T[]> {
 
     const examplesById = partRecipe.filter((elem) => elem.recipe_id === recipeId);
 
-    return examplesById;
+    return new Promise((res) => res(examplesById));
 }

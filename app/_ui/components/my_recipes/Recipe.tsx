@@ -1,19 +1,26 @@
 import type { RecipeCardType, RecipeIngredient, RecipeStep } from "@/app/_lib/definitions";
 import RecipeTitle from "@/app/_ui/components/my_recipes/RecipeTitle";
-import RecipeIngredients from "@/app/_ui/components/my_recipes/RecipeIngredients";
-import RecipeDirections from "@/app/_ui/components/my_recipes/RecipeDirections";
+import { Suspense } from "react";
+import RecipeIngredientsWrapper from "@/app/_ui/components/my_recipes/RecipeIngredientsWrapper";
+import RecipeDirectionsWrapper from "@/app/_ui/components/my_recipes/RecipeDirectionsWrapper";
+import { SkeletonRecipeDirections, SkeletonRecipeIngredients } from "@/app/_ui/components/skeletons";
 
-export default function Recipe({ recipeDescription, recipeIngredients, recipeSteps
-}: {
-    recipeDescription: RecipeCardType,
-    recipeIngredients: RecipeIngredient[],
-    recipeSteps: RecipeStep[],
+export default function Recipe({ recipId, recipeDescription, getRecipeIngredients, getRecipeSteps }: {
+    recipId: string;
+    recipeDescription: RecipeCardType;
+    getRecipeIngredients: (recipId: string) => Promise<RecipeIngredient[]>;
+    getRecipeSteps: (recipId: string) => Promise<RecipeStep[]>;
 }) {
+
     return (
         <>
             <RecipeTitle recipeDescription={recipeDescription} />
-            <RecipeIngredients recipeIngredients={recipeIngredients} initServings={recipeDescription.servings} />
-            <RecipeDirections recipeSteps={recipeSteps} />
+            <Suspense fallback={<SkeletonRecipeIngredients />}>
+                <RecipeIngredientsWrapper recipId={recipId} getRecipeIngredients={getRecipeIngredients} initServings={recipeDescription.servings} />
+            </Suspense>
+            <Suspense fallback={<SkeletonRecipeDirections />}>
+                <RecipeDirectionsWrapper recipId={recipId} getRecipeSteps={getRecipeSteps} />
+            </Suspense>
         </>
     )
 }

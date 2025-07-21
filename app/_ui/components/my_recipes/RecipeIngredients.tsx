@@ -46,7 +46,7 @@ export default function RecipeIngredients({ recipeIngredients, initServings }: {
                     </button>
                 </div>
             </div>
-            <ol className="list-decimal w-full px-10 sm:text-3xl max-w-4xl flex-col">
+            <ol className="list-decimal w-full px-10 sm:text-3xl max-w-4xl flex flex-col">
                 {recipeIngredients.map(ingridient => {
                     return <RecipeIngredientComponent key={ingridient.id} ingridient={ingridient} ratioServings={servings / initServings} />
                 })}
