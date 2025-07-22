@@ -10,7 +10,7 @@ export function SkeletonRecipeIngredients() {
                         <div
                             className="rounded-full bg-pink-600 
                             w-11 aspect-1/1 font-mono font-semibold text-4xl
-                            outline-none text-amber-500 shadow-[0_0_5px] shadow-indigo-900
+                            text-amber-500 shadow-[0_0_5px] shadow-indigo-900
                             text-center
                             "
                         >
@@ -22,7 +22,7 @@ export function SkeletonRecipeIngredients() {
                         <div
                             className="rounded-full bg-pink-600 
                             w-11 aspect-1/1 font-mono font-semibold text-4xl
-                            outline-none text-amber-500 shadow-[0_0_5px] shadow-indigo-900
+                            text-amber-500 shadow-[0_0_5px] shadow-indigo-900
                             text-center
                             "
                         >
@@ -63,7 +63,7 @@ export function SkeletonRecipeDirections() {
 
                     <div className="flex w-full justify-center items-center gap-10 flex-wrap md:flex-nowrap">
                         <div className="aspect-4/3 w-full md:w-1/2 h-full rounded-2xl bg-gray-400" />
-                        <div className="md:w-1/2 w-auto flex flex-col gap-3">
+                        <div className="md:w-1/2 w-full flex flex-col gap-3">
                             <div className="bg-gray-400 h-7 rounded-4xl" />
                             <div className="bg-gray-400 h-7 rounded-4xl" />
                             <div className="bg-gray-400 h-7 rounded-4xl" />
