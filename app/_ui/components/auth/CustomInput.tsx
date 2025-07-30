@@ -6,7 +6,7 @@ interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     isPassword?: boolean;
 }
 
-function CustomInput({ children, id, label, isPassword = false, ...rest }: CustomInputProps) {
+function CustomInput({ id, label, isPassword = false, ...rest }: Omit<CustomInputProps, "children">) {
     return (
         <div
             className="w-full flex flex-col items-center gap-2"

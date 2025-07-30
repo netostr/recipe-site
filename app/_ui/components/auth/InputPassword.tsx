@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 
-function InputPassword({ children, ...rest }: React.InputHTMLAttributes<HTMLInputElement>) {
+function InputPassword({ ...rest }: Omit<React.InputHTMLAttributes<HTMLInputElement>, "children">) {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
