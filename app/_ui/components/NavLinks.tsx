@@ -16,7 +16,7 @@ const LINKS = [
         icon: QueueListIcon,
     },
     { name: "Избранное", href: "/favorites", icon: StarIcon },
-    { name: "Добавить новый рецепт", href: "/recipe/create", icon: PlusCircleIcon },
+    { name: "Добавить новый рецепт", href: "/my_recipes/recipe/create", icon: PlusCircleIcon },
 ];
 
 export default function NavLinks() {

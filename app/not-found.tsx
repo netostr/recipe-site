@@ -2,7 +2,7 @@ import { CustomLink } from "./_ui/components/CustomLink";
 
 export default function NotFound() {
     return (
-        <div className="bg-[url(/sad_hungry.jpg)] bg-cover bg-no-repeat bg-center bg-gray-500 dark:bg-blend-multiply
+        <article className="bg-[url(/sad_hungry.jpg)] bg-cover bg-no-repeat bg-center bg-gray-500 dark:bg-blend-multiply
         min-w-full min-h-[calc(100dvh-12rem)] flex flex-col justify-center items-center gap-5 text-center p-5 rounded-4xl
         ">
             <h2 className="text-4xl font-semibold bg-linear-to-t from-transparent via-stone-950/60 to-transparent
@@ -15,6 +15,6 @@ export default function NotFound() {
             >
                 На главную
             </CustomLink>
-        </div>
+        </article>
     );
 }

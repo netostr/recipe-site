@@ -7,16 +7,16 @@ export default function Home() {
         <>
             <section className="flex flex-col justify-center items-center min-h-[calc(100dvh-6rem)] text-center 
             animate-change-bg bg-no-repeat bg-cover bg-center bg-orange-300/80 bg-blend-multiply rounded-4xl p-5 w-full">
-                <div className=" mb-10 pt-5 px-5 rounded-4xl bg-linear-to-t from-stone-950/80 to-stone-950/10  text-zinc-100">
+                <header className=" mb-10 pt-5 px-5 rounded-4xl bg-linear-to-t from-stone-950/80 to-stone-950/10  text-zinc-100">
                     <h1 className="text-6xl mb-6 font-bold">
                         Блокнот рецептов
                     </h1>
                     <p className="text-4xl sm:text-5xl mb-12">
                         Создайте свою уникальную кулинарную коллекцию. Сохраняйте любимые рецепты, добавляйте свои заметки и готовьте с удовольствием
                     </p>
-                </div>
+                </header>
 
-                <div className="flex gap-8 flex-col sm:flex-row w-full sm:w-auto">
+                <footer className="flex gap-8 flex-col sm:flex-row w-full sm:w-auto">
                     <CustomLink
                         href="#"
                     >
@@ -27,7 +27,7 @@ export default function Home() {
                     >
                         Примеры рецептов
                     </CustomLink>
-                </div>
+                </footer>
             </section>
             <section
                 className="flex flex-col gap-10 justify-center items-center text-center bg-purple-500/40 rounded-4xl p-5 w-full"
