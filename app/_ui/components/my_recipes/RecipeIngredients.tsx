@@ -21,6 +21,7 @@ export default function RecipeIngredients({ recipeIngredients, initServings }: {
                         outline-transparent outline-2 outline-solid outline-offset-2 focus-visible:outline-pink-600
                         text-amber-500 shadow-[0_0_5px] shadow-indigo-900 cursor-pointer active:scale-90 transition
                         "
+                        type="button"
                         onClick={() => setServings(servings - 1)}
                         disabled={servings <= 1}
                     >
@@ -41,6 +42,7 @@ export default function RecipeIngredients({ recipeIngredients, initServings }: {
                         outline-transparent outline-2 outline-solid outline-offset-2 focus-visible:outline-pink-600                        
                         text-amber-500 shadow-[0_0_4px] shadow-black/25 cursor-pointer active:scale-90 transition
                         "
+                        type="button"
                         onClick={() => setServings(servings + 1)}
                         disabled={servings >= 50}
                     >

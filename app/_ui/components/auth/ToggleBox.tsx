@@ -1,6 +1,6 @@
 'use client';
 
-import CustomButton from "@/app/_ui/components/auth/CustomButton"
+import CustomButton from "@/app/_ui/components/custom_components/CustomButton"
 import clsx from "clsx";
 
 function ToggleBox({ hasAccount, setHasAccount }: {

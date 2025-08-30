@@ -43,8 +43,11 @@ export default function ThemeToggle() {
     }
 
     return (
-        <button onClick={handleToogle} title={`${theme} mode`} className="sm:h-10 sm:w-10 h-8 w-8 cursor-pointer rounded-xl flex items-center justify-center
-                bg-current/10 transition-colors hover:bg-current/30">
+        <button
+            onClick={handleToogle} title={`${theme} mode`}
+            className="sm:h-10 sm:w-10 h-8 w-8 cursor-pointer rounded-xl flex items-center justify-center
+                bg-current/10 transition-colors hover:bg-current/30"
+            type="button">
             {ThemeIcon ? <ThemeIcon className="sm:h-6 sm:w-6 h-5 w-5" /> : null}
         </button>
     );

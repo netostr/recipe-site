@@ -1,5 +1,5 @@
-import CustomInput from "@/app/_ui/components/auth/CustomInput";
-import CustomButton from "@/app/_ui/components/auth/CustomButton";
+import CustomInput from "@/app/_ui/components/custom_components/CustomInput";
+import CustomButton from "@/app/_ui/components/custom_components/CustomButton";
 import clsx from "clsx";
 
 function SigninForm({ className }: {
@@ -12,9 +12,22 @@ function SigninForm({ className }: {
         )}
         >
             <h1 className="text-4xl font-bold mb-5">Вход</h1>
-            <CustomInput id="email" label="Почта" type="email" placeholder="Введите электронную почту" required />
-            <CustomInput id="password" label="Пароль" isPassword placeholder="Введите пароль" required />
-            <CustomButton type="submit">Войти</CustomButton>
+            <CustomInput
+                id="email"
+                label="Почта"
+                inputType="email"
+                placeholder="Введите электронную почту"
+            />
+            <CustomInput
+                id="password"
+                label="Пароль"
+                inputType="password"
+                placeholder="Введите пароль" />
+            <CustomButton
+                type="submit"
+            >
+                Войти
+            </CustomButton>
         </form>
     )
 }

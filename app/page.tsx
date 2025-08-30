@@ -1,6 +1,6 @@
 import RecipeCard from "@/app/_ui/components/my_recipes/RecipeCard";
 import { recipeDescriptionExamples } from "@/app/_lib/recipe-examples"
-import { CustomLink } from "@/app/_ui/components/CustomLink";
+import { CustomLink } from "@/app/_ui/components/custom_components/CustomLink";
 
 export default function Home() {
     return (
