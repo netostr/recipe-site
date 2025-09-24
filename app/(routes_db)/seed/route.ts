@@ -1,4 +1,4 @@
-import postgres from 'postgres';
+import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL!);
 
@@ -62,14 +62,14 @@ async function seedRecipeSteps() {
 
 export async function GET() {
   try {
-    await sql.begin((sql) => [
+    await sql.begin(() => [
       seedUsers(),
       seedRecipeDescriptions(),
       seedRecipeIngredients(),
       seedRecipeSteps(),
     ]);
 
-    return Response.json({ message: 'Database seeded successfully' });
+    return Response.json({ message: "Database seeded successfully" });
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }

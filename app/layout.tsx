@@ -9,7 +9,8 @@ import { ReCaptchaProvider } from "next-recaptcha-v3";
 
 export const metadata: Metadata = {
   title: "Recipes i liked",
-  description: "Ваш личный блокнот рецептов — сохраняйте, организуйте и вдохновляйтесь! Создайте свою уникальную кулинарную коллекцию. Сохраняйте любимые рецепты, добавляйте свои заметки и готовьте с удовольствием.",
+  description:
+    "Ваш личный блокнот рецептов — сохраняйте, организуйте и вдохновляйтесь! Создайте свою уникальную кулинарную коллекцию. Сохраняйте любимые рецепты, добавляйте свои заметки и готовьте с удовольствием.",
 };
 
 export default function RootLayout({
@@ -18,14 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" suppressHydrationWarning className="scroll-smooth scroll-pt-16">
+    <html
+      lang="ru"
+      suppressHydrationWarning
+      className="scroll-smooth scroll-pt-16"
+    >
       <body
         className={`${caveat.className} antialiased text-2xl min-h-dvh flex flex-col items-center gap-5 dark:bg-zinc-900 dark:text-zinc-100 bg-zinc-100 text-zinc-900`}
       >
-        <ThemeProvider
-          attribute="class"
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" disableTransitionOnChange>
           <ReCaptchaProvider>
             <Header />
             <main className="grow flex flex-col justify-center items-center gap-5 px-5 max-w-7xl w-full">
@@ -36,7 +38,6 @@ export default function RootLayout({
           </ReCaptchaProvider>
         </ThemeProvider>
       </body>
-
     </html>
   );
 }
