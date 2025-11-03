@@ -3,32 +3,28 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant any-hover {
   @media (any-hover: hover) {
-      @slot;
+    @slot;
   }
 }
 
 @theme {
+  --animate-change-bg-img: change-bg-img 20s ease-in-out infinite;
 
-    --animate-change-bg: change-bg 50s ease-in-out infinite;
-
-    @keyframes change-bg {
+  @keyframes change-bg-img {
     0% {
-        background-image: url(/background-carousel/1.jpg);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
     }
     20% {
-        background-image: url(/background-carousel/2.jpg);
+      opacity: 1;
     }
-    40% {
-        background-image: url(/background-carousel/3.jpg);
-    }
-    60% {
-        background-image: url(/background-carousel/4.jpg);
-    }
-    80% {
-        background-image: url(/background-carousel/5.jpg);
+    25% {
+      opacity: 0;
     }
     100% {
-        background-image: url(/background-carousel/1.jpg);
+      opacity: 0;
     }
   }
 }
